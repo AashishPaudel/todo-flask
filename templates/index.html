@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My ToDo List</title>
+        </head>
+    <body>
+        <h1> ToDo List</h1>
+        <form action="#" method="POST">
+            <input type="text" name="newTask" />
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            {% for task in tasks %}
+            <li>{{task}} - <a href="{{url_for('delete', task=task)}}">Complete</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+    
+
+</html>
